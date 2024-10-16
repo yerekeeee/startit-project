@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+:root {
+    --light: #F1FADA;
+    --secondary: #9AD0C2;
+    --success: #2D9596;
+    --dark: #265073;
+}
+.container {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--dark);
+}
+
+.header {
+    padding: 18px 0;
+    background-color: var(--secondary);
+}
+.menu-button {
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid var(--dark);
+    border-radius: 5px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#menu-list {
+    display: none;
+    position: relative;
+    padding: 20px 0;
+    background-color: var(--success);
+}
+.menu-list .menu-list__item {
+    list-style: none;
+}
+.menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.menu-list__link {
+    text-decoration: none;
+    color: var(--light);
+}
+.menu-list__link img {
+    position: relative;
+    top: 2px;
+    margin-right: 5px;
+}
+
+
+
+
+main {
+    background-color: var(--light);
+    min-height: 100vh;
+}
+.categories, .jobs, .job-detail, .auth {
+    padding: 30px 0;
+}
+.categories-list, .jobs-list {
+    margin: 20px 0;
+}
+.category-item {
+    font-size: 12px;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: var(--light);
+    background-color: var(--secondary);
+    border-radius: 30px;
+    padding: 10px 15px;
+    transition: 0.3s ease-in-out;
+}
+.category-item:hover {
+    background-color: var(--success);
+}
+.job-card {
+    background-color: var(--secondary);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.job-card__title, .job-card__company {
+    color: var(--dark);
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+.job-card__title {
+    font-weight: 400;
+}
+.job-card__company {
+    font-weight: 600;
+}
+.dark-button, .button-success {
+    cursor: pointer;
+    font-size: 12px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 0;
+    background-color: var(--dark);
+    color: var(--secondary);
+    padding: 10px 35px;
+    border-radius: 30px;
+    border: none;
+}
+.button-success {
+    background-color: var(--success);
+    color: var(--light);
+    font-weight: 600;
+    padding: 10px 55px;
+    margin: 20px 0;
+}
+.job-detail .title {
+    margin-bottom: 10px;
+}
+.job-detail__data {
+    color: var(--dark);
+    margin-bottom: 10px;
+}
+.job-detail__data span {
+    font-weight: 400;
+}
+.job-detail__content {
+    font-size: 12px;
+    color: var(--dark);
+    margin-bottom: 20px;
+}
+.job-detail__skills {
+    padding: 20px;
+    background-color: var(--secondary);
+    color: var(--dark);
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.job-detail__title {
+    margin-bottom: 10px;
+}
+.job-detail__skills p, .job-detail__address {
+    font-size: 12px;
+}
+.job-detail__skills li {
+    list-style: none;
+}
+.guide-image {
+    width: 100%;
+    margin-bottom: 10px;
+}
+.mb-30 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 30px;
+}
+.help {
+    font-size: 12px;
+    text-align: center;
+    color: var(--dark);
+}
+.help-link {
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--dark);
+}
+
+
+.auth form {
+    margin: 20px 0;
+}
+.auth label {
+    display: block;
+    color: var(--dark);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.auth input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: var(--secondary);
+    border-radius: 5px;
+    display: block;
+    margin-bottom: 10px;
+}
+.helptext {
+    display: none;
+}
+
+.access {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.access .title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.access .dark-text {
+    color: var(--dark);
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+.access-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}

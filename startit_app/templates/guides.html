@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}Гайды{% endblock %}
+
+
+{% block content %}
+{% if user.is_authenticated %}
+<section class="jobs">
+    <div class="container">
+        <h2 class="title">Гайды</h2>
+        <div class="jobs-list">
+            {% for guide in guides %}
+            <div class="job-card">
+                <h3 class="job-card__title">{{ guide.title|truncatechars:30 }}</h3>
+                <h3 class="job-card__company">{{ guide.created_at|date:"d.m.Y" }}</h3>
+                <a href="{% url 'guide_detail_page' pk=guide.pk %}" class="dark-button">Читать</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% else %}
+<section class="access">
+    <div class="container">
+        <h1 class="title">Вы анонимный пользователь</h1>
+        <p class="dark-text">Чтобы работать с приложением, Вам нужно будет пройти регистрацию и авторизацию</p>
+        <div class="access-action">
+            <a href="{% url 'sign_up_page' %}" class="dark-button">Регистрация</a>
+            <a href="{% url 'login_page' %}" class="dark-button">Вход</a>
+        </div>
+    </div>
+</section>
+{% endif %}
+{% endblock %}
